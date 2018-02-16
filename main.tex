@@ -19,7 +19,7 @@
 \usepackage[table]{xcolor}
 \usepackage{amsfonts,graphicx,amsmath,hyperref}
 \title{Habib University\\CS-113 Discrete Mathematics\\Spring 2018\\HW 2}
-\author{$<your ID>$}  % replace with your ID, e.g. oy02945
+\author{$ms03977$}  % replace with your ID, e.g. oy02945
 \date{Due: 19h, 16th February, 2018}
 
 
@@ -48,13 +48,42 @@
   \end{center}
 
   \begin{solution}
-    % Write your solution here
+    
+    
+    i) For the function to be partial, it is necessary for some values of the domain to have an image in the co-domain, while the other values don't have an image in the co-domain. Such that if $y=\sqrt{x}$ is a function with domain as the set of real numbers R with images formed in the co-domain also belonging to the set of real numbers R, the function will be partial as it has no image in it's co-domain for negative real numbers taken as input but has images for positive real numbers.
+    
+    For example
+    \begin{center}
+        $f(x) =\sqrt{x}$ if x \in R 
+    
+    
+        $f(-1) =\sqrt{-1} = i(iota) $,which is a complex number and is not present in the co-domain of function $f(x) =\sqrt{x}$
+    
+    
+    
+    \end{center}
+    
+    ii.) But, if we restrict the domain to have values which are in the set of positive real numbers only, the function will transform into a total function which is a function for which each value in it's domain has an image in the co-domain.
+    
+    
+    \begin{center}
+        $f(x) =\sqrt{x}$ if x \in R+
+        
+    \end{center}
   \end{solution}
   
   \part[5] Explain whether $f$ is a function from the set of all bit strings to the set of integers if $f(S)$ is the smallest $i \in \mathbb{Z}$� such that the $i$th bit of S is 1 and $f(S) = 0$ when S is the empty string. 
   
   \begin{solution}
-    % Write your solution here
+    
+    
+    $f$(S) is not a function from set of all bit strings to the set of integers because it doesn't meet the requirement of being a function, as for a function, it is first made sure that the function is defined for which type of values as it is stated in thee question that f is a function from set the set of all bit strings to the set of integers if $f$(S) is smallest then i=1 and f(S)=0. but there isn't even an image for any string that is 0 for example 00 or 000.
+    So. the function is not defined for $f$(000) and thus is not a function.
+    
+    
+    
+    
+    
   \end{solution}
 
   \part[15] For $X,Y \in S$, explain why (or why not) the following define an equivalence relation on $S$:
@@ -65,15 +94,39 @@
   \end{subparts}
 
   \begin{solution}
-    % Write your solution here
-  \end{solution}
+    Equivalence relation requires a set to have a symmetric, reflexive and transitive relation at the same time.
+    
+    
+    i) This defines a reflexive relation because if X is present in X's class and this is a fact for Y too. [(X,X),(Y,Y)] $\in$ S. This set also fulfills the demands of being symmetric as X is present in Y's class so Y is also present in X's class. [(X,Y),(Y,X)] $\in$ S. Transitive property is not defined for this because X is in Y have been in class together and there is some other person Z who is with Y in a class together, it's not necessary for X and Z to be in the same class because it's possible that Y and Z may have been in a different class and X and Y occurring in a different one. So, if (X,Y) and (Y,Z) $\in$ S. It's not necessary that (X,Z) $\in$ S. So equivalence relation is not defined for this set.
+
+
+    
+    ii) This defines a reflexive relation because if X and Y rhyme, then they both rhyme with themselves too. [(X,X),(Y,Y)] $\in$ S. This set also fulfills the demands of being symmetric as X rhymes with Y so Y also rhymes with X.
+    [(X,Y),(Y,X)] $\in$ S. Transitive property is also defined for this because X rhymes with Y and there exists a word Z to which Y rhymes with. If X rhymes with Y and Y rhymes with Z thus X rhymes with Z too. So, if (X,Y) and (Y,Z) $\in$ S. It's necessary that (X,Z) $\in$ S. Thus, equivalency is defined for this set.
+ 
+ 
+    
+    iii) This defines a reflexive relation because a set is a subset of itself. [(X,X),(Y,Y)] $\in$ S. This set also doesn't fulfill the demands of being symmetric as X is a subset of Y, it's not necessary that Y is also a subset of X. [(X,Y),(Y,X)] $\notin$ S . Thus equivalence is not possible
+    \end{solution}
 
 \end{parts}
 
 %Long questions (75)
 \question[15] Let $A = f^{-1}(B)$. Prove that $f(A) \subseteq B$.
   \begin{solution}
-    % Write your solution here
+        If $A = f^{-1}(B)$, then it is invertible and we can write it as $B = f(A)$ or $f(A) = B$. Moreover, if an inverse is possible for the function, then we can assure that the function is bijective and obeys one-one correspondence that is for one element in the domain there exists a mapping(element) in it's co-domain or vice versa.$f(A)=B$ is bijective from A to B which deduces that f is surjective too. If a set is equal to another set, then it is also 
+        true that the set is an improper subset of the other set.
+        
+        So,
+        \begin{center}
+        
+        
+        $f(A) \subseteq B $
+            
+        \end{center}
+         
+        
+        
   \end{solution}
 
 \question[15] Consider $[n] = \{1,2,3,...,n\}$ where $n \in \mathbb{N}$. Let $A$ be the set of subsets of $[n]$ that have even size, and let $B$ be the set of subsets of $[n]$ that have odd size. Establish a bijection from $A$ to $B$, thereby proving $|A| = |B|$. (Such a bijection is suggested below for $n = 3$) 
@@ -88,7 +141,35 @@
 \end{center}
 
   \begin{solution}
-    % Write your solution here
+    According to the table, the pattern is to add the value of n to the set B if it is not currently present in A, and if n is present in A, it is removed in set B.
+    We have to prove this by establishing a bijection. In other words, we have to find out if it's surjective and injective. Let Ai and Aii be two subsets of A and considering $f(Ai)=f(Aii)$. We know that
+    \begin{center}
+        $A_i - \{n\} = f(A_i) = f(A_i_i) = A_i_i - \{n\}$
+        
+        
+        OR
+        
+        
+        $A_i \cup \{n\} = f(A_i) = f(A_i_i) = A_i_i \cup \{n\}.$
+        
+        
+        In either case above, we can say that Ai=Aii, and so f is injective.
+        
+        To prove now that $f$ is surjective too, let B be the element of the set of images of $f$. if  B contains n, then B- $\{n\}$ is a subset of even size that is set towards B under $f$.  If B doesn't contain n , then $B \cap \{n\}$ is a subset of even size set towards B with respect to $f$.
+        
+        
+        Since everything in the set of images has something in the set of domain that maps to it, $f$ is surjective.
+        
+        Bijection is established from A to B as it is surjective and injective both.
+        The fact that one-one correspondence is established between set A and B draws the conclusion that each element is mapped to a single unique element.Thereby proving that the cardinality of both the sets are equal too.
+        
+        
+
+
+        
+        
+        
+    \end{center}{}
   \end{solution}
   
 \question Mushrooms play a vital role in the biosphere of our planet. They also have recreational uses, such as in understanding the mathematical series below. A mushroom number, $M_n$, is a figurate number that can be represented in the form of a mushroom shaped grid of points, such that the number of points is the mushroom number. A mushroom consists of a stem and cap, while its height is the combined height of the two parts. Here is $M_5=23$:
@@ -121,14 +202,41 @@ Study the first five mushrooms carefully and make sure you can draw subsequent o
   \begin{parts}
     \part[15] Derive a closed-form for $M_n$ in terms of $n$.
   \begin{solution}
-    % Write your solution here
+    According to the examples in the provided images, CAP heights in the sequences are: 1,2,2,3,3,3,4,4,4,4...=Cap_height(Mn)=floor(n/2)+1
+
+                                                    
+  and CAPwidth are 2,3,4,5,6 = Cap_width=n+1
+  
+  
+  and Stemheight(Mn)=n-1 from the above examples
+  
+  
+  The formula would be $$2(n-1) + \sum_{i=0}^{floor(n/2)+1} (n+1)-i $$ = Number of dots.
+  
+  
+  
+  
+  
+
+  
+
   \end{solution}
     \part[5] What is the total height of the $20$th mushroom in the series? 
-  \begin{solution}
-    % Write your solution here
-  \end{solution}
-\end{parts}
 
+    The total height of the mushroom will be the sum of Capheight and Stemheight .
+    
+    \begin{center}
+        CaPHEIGHT+ Stemheight = total height
+        Floor(n/2)+1 +(n-1) = total height
+        
+        20th total height = Floor(20/2)+1 +(20-1)
+        height= 10+1 +19
+        height= 30
+        
+    \end{center}
+  
+
+\end{parts}
 \question
     The \href{https://en.wikipedia.org/wiki/Fibonacci_number}{Fibonacci series} is an infinite sequence of integers, starting with $1$ and $2$ and defined recursively after that, for the $n$th term in the array, as $F(n) = F(n-1) + F(n-2)$. In this problem, we will count an interesting set derived from the Fibonacci recurrence.
     
@@ -153,12 +261,46 @@ The \href{http://www.maths.surrey.ac.uk/hosted-sites/R.Knott/Fibonacci/fibGen.ht
   \part[10] To begin, prove that the Fibonacci series is countable.
  
     \begin{solution}
-    % Write your solution here
+    A set S is countable if there exists a bijection between S and N(Set of Natural Numbers). To prove the bijection, we need to prove that it's surjective and injective that is onto and one to one function.
+    In fibonacci sequence, $f(0) = 0 $ and $f(1)=1 $ when n =0 and n=1 respectively.
+    while the proceeding terms are independent of the previous elements.
+    Some of it's proceeding terms are.
+    
+    
+    f2 = f1 + f0 = 1 + 0 = 1,
+    
+    
+    f3 = f2 + f1 = 1 + 1 = 2,
+    
+    
+    f4 = f3 + f2 = 2 + 1 = 3,
+    
+    
+    f5 = f4 + f3 = 3 + 2 = 5,
+    
+    
+    f6 = f5 + f4 = 5 + 3 = 8.
+    
+    
+    The function from S to N is injective because every element of S is mapped to N.
+    and any element of S is not left out.
+    
+    
+    If we reverse the domain and co-domain of this function, every element of Natural numbers map to the elements of set S. Thus, it is bijective.
+    
+    Thus every element is mapped to a single unique element in N, It is proven to be countable.
+
+    
+    
+    
+    
+    
+    
   \end{solution}
   \part[15] Consider the Modified Wythoff as any array derived from the original, where each entry of the leading diagonal (marked in blue) of the original 2D-Array is replaced with an integer that does not occur in that row. Prove that the Modified Wythoff Array is countable. 
 
   \begin{solution}
-    % Write your solution here
+    
   \end{solution}
 \end{parts}
 
